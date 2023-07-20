@@ -58,14 +58,38 @@ export default function Template1() {
       }
     });
   }, []);
+  const handleDownloadPDF = async () => {
+    const currentUrl = window.location.href;
 
-  const handleDownloadPDF = () => {
-    const templateName = `template1/${uniqueId}`;
-    window.open(
-      `https://dynamic-portfolio2.onrender.com/api/template/download-pdf?template=${templateName}`,
-      "_blank"
-    );
+    // Now, make an HTTP request to the backend with the current URL
+    // You can use Fetch or any other library to perform the request.
+    // Example using Fetch:
+    await fetch(
+      "https://dynamic-portfolio2.onrender.com/api/template/download-pdf",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ url: currentUrl }),
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle the response from the backend if needed
+      })
+      .catch((error) => {
+        // Handle any errors that occur during the request
+      });
   };
+
+  // const handleDownloadPDF = () => {
+  //   const templateName = `template1/${uniqueId}`;
+  //   window.open(
+  //     `https://dynamic-portfolio2.onrender.com/api/template/download-pdf?template=${templateName}`,
+  //     "_blank"
+  //   );
+  // };
   // Click event on [data-toggle="lightbox"]
   // document.addEventListener("click", function (event) {
   //   if (event.target.matches('[data-toggle="lightbox"]')) {
