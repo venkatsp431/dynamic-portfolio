@@ -148,7 +148,7 @@ export default function Template2() {
               <h1 class="hero-title mb-4">
                 I am {data?.personalDetails?.name}
               </h1>
-              <p class="hero-subtitle">{data?.personalDetails.designation}</p>
+              <p class="hero-subtitle">{data?.personalDetails?.designation}</p>
             </div>
           </div>
         </div>
