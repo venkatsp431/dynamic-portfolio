@@ -60,7 +60,7 @@ export default function Template1() {
   }, []);
 
   const handleDownloadPDF = () => {
-    const templateName = `/template1/${uniqueId}`;
+    const templateName = `template1/${uniqueId}`;
     window.open(
       `https://dynamic-portfolio2.onrender.com/api/template/download-pdf?template=${templateName}`,
       "_blank"
