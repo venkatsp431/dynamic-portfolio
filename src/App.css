@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+.form-data h2 {
+  margin: 20px 0;
+}
+.spaced-field {
+  margin-bottom: 10px;
+}
+.submit-margin {
+  margin-bottom: 30px;
+}
+.my-form {
+  margin-top: 20px;
+}
+#main-header img {
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#main-header .port-item {
+  width: 30%;
+}
+.hero-edit {
+  height: 40vh !important;
+}
+#main-header .port-item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.text-darker {
+  color: rgba(0, 0, 0, 0.5) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.text-pad a {
+  padding: 5px 20px !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+.bg-black {
+  color: #fff;
+  background: #000;
+}
+.collapse {
+  page-break-inside: avoid;
+}
+.hidden {
+  display: none;
+}
+.mar-height {
+  margin: 50px 0;
+}
+@media (min-width: 1199px) {
+  .port-item {
+    padding: 3em !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.article-row1 {
+  height: 632px;
+  width: 100%;
+  background: url(./images/article-background.png) right 0 no-repeat;
+}
+.article-row1-wrapper {
+  background-color: rgba(178, 160, 140, 0.6);
+  height: 632px;
+  width: 50%;
+  padding-left: 5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding-right: 10px;
+}
+.article-row1-wrapper h1 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.article-row1-wrapper p {
+  font-size: 20px;
+  color: #fff;
+}
+.download-btn {
+  background-color: #fff;
+  padding: 20px 30px;
+  color: #000;
+  border-radius: 3px;
+  border: 0px;
+  line-height: normal;
+  font-size: 14px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 1s;
+  display: inline-block;
+  width: 170px;
+}
+.download-btn:hover {
+  background-color: #a0e89b;
+}
+.card-templates {
+  margin: 80px;
+}
+
+.footer {
+  background-color: rgba(178, 160, 140, 0.6);
+  padding: 5rem 0;
+}
+.newsletter-title {
+  font-size: 48px;
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+.newsletter-box {
+  display: flex;
+  padding-bottom: 1rem;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.newsletter-box input {
+  width: 410px;
+  height: 60px;
+  border: 0px;
+  background-color: #fff;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  padding-left: 1rem;
+  font-size: 18px;
+  font-weight: 500;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.newsletter-box input:focus {
+  outline: none;
+  border: 0px;
+  box-shadow: 0 0 0;
+}
+.newsletter-box button {
+  width: 140px;
+  height: 62px;
+  border: 0px;
+  background-color: #a0e89b;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: flex;
+  align-items: center;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 1s;
+}
+.pointer {
+  cursor: pointer;
+}
+.newsletter-box button:hover {
+  background-color: #a0e89b;
+}
+.newsletter-box button:focus {
+  outline: none;
+  border: 0px;
+  box-shadow: 0 0 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+}
+.copyright a {
+  color: #fff;
+  padding: 1rem 2rem;
+}
+.copyright a:hover {
+  color: #8ac441;
+}
+.copyright-padding {
+  padding-right: 1rem;
 }
