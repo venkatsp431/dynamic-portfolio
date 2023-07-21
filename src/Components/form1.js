@@ -144,18 +144,6 @@ const MyForm = () => {
     arrayHelpers.remove(index);
   };
 
-  // const handleFileUpload = (event, projectIndex) => {
-  //   const files = Array.from(event.currentTarget.files);
-  //   setFileUploads((prevFileUploads) => {
-  //     const updatedFileUploads = [...prevFileUploads];
-  //     updatedFileUploads[projectIndex] = files;
-  //     return updatedFileUploads;
-  //   });
-  // };
-  // const handleSkillNameBlur = (index, setFieldValue) => {
-  //   setFieldValue(`skills[${index}].skillPercentage`, "");
-  // };
-
   return (
     <Base>
       <Container className="form-data">
@@ -448,11 +436,7 @@ const MyForm = () => {
                                 className="form-control"
                               />
                             </div>
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={handleFileChange}
-                            />
+
                             <Button type="button" onClick={() => remove(index)}>
                               Remove Project
                             </Button>

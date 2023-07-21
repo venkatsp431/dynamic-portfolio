@@ -258,10 +258,7 @@ export default function Template1() {
           <div id="work" className="collapse">
             <div className="card card-body bg-warning text-white py-5">
               <h2>My Projects</h2>
-              <p className="lead">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil,
-                ut!
-              </p>
+              <p className="lead">Projects I have been In</p>
             </div>
 
             <div className="card card-body py-5">
@@ -282,93 +279,6 @@ export default function Template1() {
                     </a>
                   </div>
                 ))}
-                <div className="col-md-3">
-                  <a
-                    href="https://unsplash.it/1200/768.jpg?image=253"
-                    data-toggle="lightbox"
-                  >
-                    <img
-                      src="https://unsplash.it/600.jpg?image=253"
-                      alt=""
-                      className="img-fluid"
-                    />
-                  </a>
-                </div>
-                <div className="col-md-3">
-                  <a
-                    href="https://unsplash.it/1200/768.jpg?image=254"
-                    data-toggle="lightbox"
-                  >
-                    <img
-                      src="https://unsplash.it/600.jpg?image=254"
-                      alt=""
-                      className="img-fluid"
-                    />
-                  </a>
-                </div>
-                <div className="col-md-3">
-                  <a
-                    href="https://unsplash.it/1200/768.jpg?image=255"
-                    data-toggle="lightbox"
-                  >
-                    <img
-                      src="https://unsplash.it/600.jpg?image=255"
-                      alt=""
-                      className="img-fluid"
-                    />
-                  </a>
-                </div>
-              </div>
-
-              <div className="row no-gutters">
-                <div className="col-md-3">
-                  <a
-                    href="https://unsplash.it/1200/768.jpg?image=256"
-                    data-toggle="lightbox"
-                  >
-                    <img
-                      src="https://unsplash.it/600.jpg?image=256"
-                      alt=""
-                      className="img-fluid"
-                    />
-                  </a>
-                </div>
-                <div className="col-md-3">
-                  <a
-                    href="https://unsplash.it/1200/768.jpg?image=257"
-                    data-toggle="lightbox"
-                  >
-                    <img
-                      src="https://unsplash.it/600.jpg?image=257"
-                      alt=""
-                      className="img-fluid"
-                    />
-                  </a>
-                </div>
-                <div className="col-md-3">
-                  <a
-                    href="https://unsplash.it/1200/768.jpg?image=258"
-                    data-toggle="lightbox"
-                  >
-                    <img
-                      src="https://unsplash.it/600.jpg?image=258"
-                      alt=""
-                      className="img-fluid"
-                    />
-                  </a>
-                </div>
-                <div className="col-md-3">
-                  <a
-                    href="https://unsplash.it/1200/768.jpg?image=259"
-                    data-toggle="lightbox"
-                  >
-                    <img
-                      src="https://unsplash.it/600.jpg?image=259"
-                      alt=""
-                      className="img-fluid"
-                    />
-                  </a>
-                </div>
               </div>
             </div>
           </div>
