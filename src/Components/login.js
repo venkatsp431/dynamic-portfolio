@@ -81,7 +81,11 @@ function Login() {
             Login
           </MDBBtn>
           <p>not yet signed up? Click here</p>
-          <MDBBtn className="w-50 mb-4" size="md">
+          <MDBBtn
+            className="w-50 mb-4"
+            size="md"
+            onClick={() => navigate("/signup")}
+          >
             Signup
           </MDBBtn>
         </MDBCardBody>

@@ -62,7 +62,7 @@ const Dashboard = () => {
                       variant="outline-primary"
                       onClick={() => navigate(`/myform/1`)}
                     >
-                      View Demo
+                      Create
                     </Button>{" "}
                   </Card.Body>
                 </Col>
@@ -94,7 +94,7 @@ const Dashboard = () => {
                       variant="outline-primary"
                       onClick={() => navigate(`/myform/2`)}
                     >
-                      View Demo
+                      Create
                     </Button>{" "}
                   </Card.Body>
                 </Col>
@@ -110,7 +110,7 @@ const Dashboard = () => {
           </div>
           <div class="copyright">
             <span class="copyright-padding">
-              &copy; 2019 Indegene. All rights reserved
+              &copy; 2023, My Portfolio. All rights reserved
             </span>{" "}
             |<a href="#">Contact Us</a> |<a href="#">Privacy Policy</a> |
             <a href="#">CSR Policy</a>
