@@ -68,7 +68,7 @@ function Login() {
           <MDBInput
             wrapperClass="mb-4"
             placeholder="Password"
-            id="form1"
+            id="form2"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
