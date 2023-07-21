@@ -58,12 +58,12 @@ export default function Template1() {
       }
     });
   }, []);
-  const handleDownloadPDF = async () => {
-    const currentUrl = window.location.href;
+  // const handleDownloadPDF = async () => {
+  //   const currentUrl = window.location.href;
 
-    // Now, make an HTTP request to the backend with the current URL
-    // You can use Fetch or any other library to perform the request.
-    // Example using Fetch:
+  //   // Now, make an HTTP request to the backend with the current URL
+  //   // You can use Fetch or any other library to perform the request.
+  // Example using Fetch:
   //   await fetch(
   //     "https://dynamic-portfolio2.onrender.com/api/template/download-pdf",
   //     {
