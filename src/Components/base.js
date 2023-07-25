@@ -42,13 +42,10 @@ export default function Base({ children }) {
     <div>
       <Navbar expand="lg" bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">My Portfolio</Navbar.Brand>
+          <Navbar.Brand to="/">My Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="#about">About</Nav.Link>
-
-              <Nav.Link href="#contact">Contact</Nav.Link>
               {loggedIn ? (
                 <Dropdown>
                   <Dropdown.Toggle
@@ -59,7 +56,9 @@ export default function Base({ children }) {
                     {user}
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="text-pad">
-                    <Dropdown.Item>View Profile</Dropdown.Item>
+                    <Dropdown.Item onClick={() => navigate("/myprofile")}>
+                      View Profile
+                    </Dropdown.Item>
                     <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
