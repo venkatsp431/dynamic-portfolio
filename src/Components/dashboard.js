@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Navbar,
-  Nav,
-  Container,
-  Card,
-  Button,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Container, Card, Button, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Base from "./base";
 import temp2Image from "../images/temp2.png";
@@ -103,17 +95,11 @@ const Dashboard = () => {
           </Container>
         </div>
         <footer class="footer">
-          <h1 class="newsletter-title">NEWSLETTER</h1>
-          <div class="newsletter-box">
-            <input type="email" placeholder="Enter email address" />
-            <button>Subscribe</button>
-          </div>
           <div class="copyright">
             <span class="copyright-padding">
               &copy; 2023, My Portfolio. All rights reserved
             </span>{" "}
-            |<a href="#">Contact Us</a> |<a href="#">Privacy Policy</a> |
-            <a href="#">CSR Policy</a>
+            |
           </div>
         </footer>
       </Base>

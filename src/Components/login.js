@@ -73,9 +73,9 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <a href="!#" className="mb-3">
+          {/* <a href="!#" className="mb-3">
             Forgot password?
-          </a>
+          </a> */}
 
           <MDBBtn className="w-100 my-4" size="md" onClick={handleLogin}>
             Login

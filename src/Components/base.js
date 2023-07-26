@@ -20,7 +20,7 @@ export default function Base({ children }) {
         }
       );
       const data = await res.json();
-      console.log(data);
+
       setUser(data.name);
     }
 
@@ -42,7 +42,7 @@ export default function Base({ children }) {
     <div>
       <Navbar expand="lg" bg="light" variant="light">
         <Container>
-          <Navbar.Brand onClick={() => navigate("/")}>
+          <Navbar.Brand href="#" onClick={() => navigate("/")}>
             My Portfolio
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

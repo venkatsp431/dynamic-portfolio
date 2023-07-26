@@ -9,7 +9,7 @@ export default function Template1() {
   const { uniqueId } = useParams();
   const [data, setData] = useState(null);
   const [img, setImg] = useState(null);
-  console.log(data);
+
   useEffect(() => {
     const fetchTemplateData = async () => {
       try {
@@ -18,25 +18,21 @@ export default function Template1() {
         );
         const file = await fileResponse.json();
         console.log(file.fileUrl);
-        // const imageElement = document.querySelector(".my-pic");
+
         setImg(file.fileUrl);
-        // imageElement.src = file.fileURL;
+
         const response = await fetch(
           `https://dynamic-portfolio2.onrender.com/api/template/templateid/${uniqueId}`
         );
 
         const datas = await response.json();
         setData(datas.data);
-        // Set the template data in state
-
-        console.log(datas);
       } catch (error) {
         console.error("Error fetching template data:", error);
       }
     };
 
     fetchTemplateData();
-    // Click event on .port-item
   }, [uniqueId]);
   useEffect(() => {
     var portItems = document.querySelectorAll(".port-item");
@@ -49,37 +45,14 @@ export default function Template1() {
       });
     }
 
-    // Click event on [data-toggle="lightbox"]
     document.addEventListener("click", function (event) {
       if (event.target.matches('[data-toggle="lightbox"]')) {
         event.preventDefault();
-        // Assuming you have included the required ekko-lightbox JavaScript library
+
         $(event.target).ekkoLightbox();
       }
     });
   }, []);
-  // const handleDownloadPDF = async () => {
-  //   const currentUrl = window.location.href;
-
-  //   // Now, make an HTTP request to the backend with the current URL
-  //   // You can use Fetch or any other library to perform the request.
-  // Example using Fetch:
-  //   await fetch(
-  //     "https://dynamic-portfolio2.onrender.com/api/template/download-pdf",
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({ url: currentUrl }),
-  //     }
-  //   )
-  //     .then((response) => response.json())
-
-  //     .catch((error) => {
-  //       // Handle any errors that occur during the request
-  //     });
-  // };
 
   const handleDownloadPDF = () => {
     const templateName = `template1/${uniqueId}`;
@@ -88,14 +61,6 @@ export default function Template1() {
       "_blank"
     );
   };
-  // Click event on [data-toggle="lightbox"]
-  // document.addEventListener("click", function (event) {
-  //   if (event.target.matches('[data-toggle="lightbox"]')) {
-  //     event.preventDefault();
-  //     // Assuming you have included the required ekko-lightbox JavaScript library
-  //     $(event.target).ekkoLightbox();
-  //   }
-  // });
 
   return (
     <div>
@@ -113,26 +78,6 @@ export default function Template1() {
                       <h1 className="display-4">
                         {data?.personalDetails?.name}
                       </h1>
-                      {/* <div className="d-none d-md-block">
-                        <a href="http://twitter.com" className="text-white">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </div>
-                      <div>
-                        <a href="http://facebook.com" className="text-white">
-                          <i className="fab fa-facebook"></i>
-                        </a>
-                      </div>
-                      <div>
-                        <a href="http://instagram.com" className="text-white">
-                          <i className="fab fa-instagram"></i>
-                        </a>
-                      </div>
-                      <div>
-                        <a href="http://github.com" className="text-white">
-                          <i className="fab fa-github"></i>
-                        </a>
-                      </div> */}
                     </div>
                   </div>
 
@@ -273,7 +218,6 @@ export default function Template1() {
                         <Card.Body>
                           <Card.Title>{project.projectName}</Card.Title>
                           <Card.Text>{project.description}</Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
                         </Card.Body>
                       </Card>
                     </a>

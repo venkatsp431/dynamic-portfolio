@@ -1,21 +1,14 @@
 import React, { useState } from "react";
-import {
-  Formik,
-  Form,
-  Field,
-  FieldArray,
-  ErrorMessage,
-  useFormikContext,
-} from "formik";
+import { Formik, Form, Field, FieldArray } from "formik";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Base from "./base";
 import { useNavigate, useParams } from "react-router-dom";
 
 const MyForm = () => {
   let { tempid } = useParams();
-  console.log(tempid);
+
   const navigate = useNavigate();
-  // const { setFieldValue } = useFormikContext();
+
   const [selectedFile, setSelectedFile] = useState(null);
   const [projectfile, setProfile] = useState([]);
   const handleFileChange = (event) => {
@@ -67,13 +60,11 @@ const MyForm = () => {
     skills: [{ skillName: "", skillPercentage: "" }],
   };
 
-  // const [fileUploads, setFileUploads] = useState([]);
-
   const onSubmit = async (values) => {
     try {
       let uniqueId;
       const fileFormData = new FormData();
-      fileFormData.append("uploaded_file", selectedFile); // Assuming you have a file object
+      fileFormData.append("uploaded_file", selectedFile);
 
       const fileResponse = await fetch(
         `https://dynamic-portfolio2.onrender.com/api/template/uploader`,
@@ -84,11 +75,9 @@ const MyForm = () => {
       );
 
       if (fileResponse.ok) {
-        // File upload success
         const fileData = await fileResponse.json();
         console.log("File upload success:", fileData);
       } else {
-        // File upload failed
         console.error("File upload failed.");
       }
 
@@ -140,9 +129,9 @@ const MyForm = () => {
       console.error("Error submitting form:", error);
     }
   };
-  const removeProject = (arrayHelpers, index) => {
-    arrayHelpers.remove(index);
-  };
+  // const removeProject = (arrayHelpers, index) => {
+  //   arrayHelpers.remove(index);
+  // };
 
   return (
     <Base>
@@ -166,54 +155,63 @@ const MyForm = () => {
                     accept="image/*"
                     className="my-3"
                     onChange={handleFileChange}
+                    required
                   />
                   <Field
                     className="form-control spaced-field"
                     type="text"
                     name="personalDetails.designation"
                     placeholder="Designation"
+                    required
                   />
                   <Field
                     className="form-control spaced-field"
                     type="number"
                     name="personalDetails.experience"
                     placeholder="Experience"
+                    required
                   />
                   <Field
                     className="form-control spaced-field"
                     type="email"
                     name="personalDetails.email"
                     placeholder="Email"
+                    required
                   />
                   <Field
                     className="form-control spaced-field"
                     type="text"
                     name="personalDetails.birthday"
                     placeholder="Birthday"
+                    required
                   />
                   <Field
                     className="form-control spaced-field"
                     type="number"
                     name="personalDetails.phone"
                     placeholder="Phone"
+                    required
                   />
                   <Field
                     className="form-control spaced-field"
                     type="text"
                     name="personalDetails.city"
                     placeholder="City"
+                    required
                   />
                   <Field
                     className="form-control spaced-field"
                     type="number"
                     name="personalDetails.age"
                     placeholder="Age"
+                    required
                   />
                   <Field
                     className="form-control spaced-field"
                     as="textarea"
                     name="personalDetails.professionalSummary"
                     placeholder="Professional Summary"
+                    required
                   />
                 </Col>
               </Row>
@@ -231,24 +229,28 @@ const MyForm = () => {
                               type="text"
                               name={`educationDetails[${index}].qualification`}
                               placeholder="Qualification"
+                              required
                             />
                             <Field
                               className="form-control spaced-field"
                               type="text"
                               name={`educationDetails[${index}].institution`}
                               placeholder="Institution"
+                              required
                             />
                             <Field
                               className="form-control spaced-field"
                               type="text"
                               name={`educationDetails[${index}].dates`}
                               placeholder="Dates"
+                              required
                             />
                             <Field
                               className="form-control spaced-field"
                               type="text"
                               name={`educationDetails[${index}].coursework`}
                               placeholder="Coursework"
+                              required
                             />
                             <Button
                               variant="danger"
@@ -284,24 +286,28 @@ const MyForm = () => {
                               type="text"
                               name={`workExperience[${index}].jobTitle`}
                               placeholder="Position"
+                              required
                             />
                             <Field
                               className="form-control spaced-field"
                               type="text"
                               name={`workExperience[${index}].company`}
                               placeholder="Company"
+                              required
                             />
                             <Field
                               className="form-control spaced-field"
                               type="text"
                               name={`workExperience[${index}].dates`}
                               placeholder="Dates"
+                              required
                             />
                             <Field
                               className="form-control spaced-field"
                               as="textarea"
                               name={`workExperience[${index}].responsibility`}
                               placeholder="Responsibility"
+                              required
                             />
                             <Button
                               variant="danger"
@@ -338,6 +344,7 @@ const MyForm = () => {
                                 type="text"
                                 name={`skills[${index}].skillName`}
                                 placeholder="Skill Name"
+                                required
                               />
                             </div>
                             <div className="col">
@@ -346,6 +353,7 @@ const MyForm = () => {
                                 type="number"
                                 name={`skills[${index}].skillPercentage`}
                                 placeholder="Skill Percentage (Out of 100)"
+                                required
                               />
                             </div>
                           </div>
@@ -410,6 +418,7 @@ const MyForm = () => {
                                 type="text"
                                 name={`projects[${index}].projectName`}
                                 className="form-control"
+                                required
                               />
                             </div>
                             <div className="form-group">
@@ -418,6 +427,7 @@ const MyForm = () => {
                                 as="textarea"
                                 name={`projects[${index}].description`}
                                 className="form-control"
+                                required
                               />
                             </div>
                             <div className="form-group">
@@ -426,6 +436,7 @@ const MyForm = () => {
                                 type="text"
                                 name={`projects[${index}].technologies`}
                                 className="form-control"
+                                required
                               />
                             </div>
                             <div className="form-group">
@@ -434,6 +445,7 @@ const MyForm = () => {
                                 type="text"
                                 name={`projects[${index}].role`}
                                 className="form-control"
+                                required
                               />
                             </div>
 
