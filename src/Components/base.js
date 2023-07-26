@@ -42,7 +42,9 @@ export default function Base({ children }) {
     <div>
       <Navbar expand="lg" bg="light" variant="light">
         <Container>
-          <Navbar.Brand to="/">My Portfolio</Navbar.Brand>
+          <Navbar.Brand onClick={() => navigate("/")}>
+            My Portfolio
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
